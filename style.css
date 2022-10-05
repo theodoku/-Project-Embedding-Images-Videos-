@@ -17,7 +17,6 @@ div {
     justify-content: center;
     align-items: center;
     align-content: center;
-    flex-wrap: nowrap;
 }
 
 form {
@@ -41,6 +40,9 @@ button {
     --BORDER-COLOR:#333;
     --SEARCH__BUTTON-BGCOLOR:papayawhip;
     --SEARCH__BUTTON-HOVER-BGCOLOR:#000;
+    --VIDEO-BUTTON-COLOR:#888;
+    --VIDEO-SUBSCRIBE-COLOR: #444;
+    --VIDEO-SUBSCRIBE-BGCOLOR: red;
 }
 
 /* || GENERAL STYLE */
@@ -49,6 +51,21 @@ html {
     scroll-behavior: smooth;
     font-size: var(--FS);
     font-family: var(--FF);
+}
+
+/* TOPOGRAPHY*/
+img {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    font-size: 1em;
+    margin:0.5em 0;
+}
+p {
+    font-size: 1em;
+    margin: 0.5em 0;
 }
 
 /* || HEADER & NAVIGATION */
@@ -115,11 +132,9 @@ html {
 
 /* || CONTENT */
 
-.header__wrapper {
+.content__wrapper {
     margin: auto;
     padding: 0;
-    max-width: 70em;
-    align-items: flex-start;
 }
 
 .video__wrapper {
@@ -144,12 +159,77 @@ html {
 #video-title {
     flex-direction: column;
     padding: 10px 0;
+    align-items: stretch;
 }
 
 .video__button__wrapper {
     justify-content: flex-start;
     margin: 10px 0;
+    border-bottom: 1px solid;
+}
+.video__subscribe__wrapper {
+    align-content: center;
+}
+
+.video-buttons {
+    margin:0 5px 0;
+    color: var(--VIDEO-BUTTON-COLOR);
+}
+
+#video-views-button {
+    justify-content: flex-start;
+    color: var(--VIDEO-BUTTON-COLOR);
+    font-size: 1em;
+}
+
+#video-subscribe {
+    padding: 0 10px;
+    color:var(--VIDEO-SUBSCRIBE-COLOR);
+    background: var(--VIDEO-SUBSCRIBE-BGCOLOR);
+
 }
 
 /* || COMMENTS */
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    
+}
+
+#grid-comments1,
+.grid-comments2 {
+    grid-column: 2 / -1;
+}
+
+#comments {
+    flex-direction: column;
+    padding:10px 0;
+    border-top: 1px solid var(--BORDER-COLOR);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.content-image {
+    flex-direction: column;
+}
+
+.comment__wrapper {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin:20px 0;
+
+}
+
+.comments-text {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 80%;
+    padding: 0 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 3em;
+}
