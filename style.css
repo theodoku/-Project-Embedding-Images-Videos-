@@ -112,3 +112,44 @@ html {
     height:15px;
     width:15px;
 }
+
+/* || CONTENT */
+
+.header__wrapper {
+    margin: auto;
+    padding: 0;
+    max-width: 70em;
+    align-items: flex-start;
+}
+
+.video__wrapper {
+    flex-direction:column;
+    flex-basis: 60%;
+    align-items: stretch;
+}
+
+#video,
+#video-title,
+#video-subscribe
+#comments {
+    margin: 0;
+}
+
+.video__subscribe__wrapper
+.video__button__wrapper {
+    justify-content: space-between;
+    margin: 10px 0 0 
+}
+
+#video-title {
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.video__button__wrapper {
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+/* || COMMENTS */
+
