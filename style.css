@@ -12,7 +12,6 @@ input, button {
 }
 
 div {
-    display: flex;
     flex-direction:row;
     justify-content: center;
     align-items: center;
@@ -141,7 +140,7 @@ p {
 .content__wrapper-grid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     float: left;
     width: 70%;
 
@@ -234,11 +233,19 @@ p {
     width: 30%;
 }
 
-
 .sidebar-video-text ul li {
     list-style-type: none;
     font-size: small;
     padding:10px;
+}
+
+.thumbs-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    
+   
 }
 .thumb-image {
     padding: 15px;
