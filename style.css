@@ -36,14 +36,14 @@ button {
     --FS: clamp(1rem, 2.2vw, 1.5rem);
 
     /* COLOR */
-    --HEADER-BGCOLOR: aliceblue;
+    --BGCOLOR: rgb(247, 240, 240);
     --BORDER-COLOR: #333;
+    --HEADER-BGCOLOR: aliceblue;
     --SEARCH__BUTTON-BGCOLOR: papayawhip;
     --SEARCH__BUTTON-HOVER-BGCOLOR: #000;
     --VIDEO-BUTTON-COLOR: #888;
-    --VIDEO-SUBSCRIBE-COLOR: #444;
     --VIDEO-SUBSCRIBE-BGCOLOR: red;
-    --BGCOLOR: rgb(247, 240, 240);
+    --VIDEO-SUBSCRIBE-COLOR: #444;
 
 
 }
@@ -59,7 +59,7 @@ html {
 
 /* TOPOGRAPHY*/
 img {
-    display: flex;
+    display: grid;
     flex-direction: column;
 }
 
@@ -78,20 +78,20 @@ p {
 /* || HEADER & NAVIGATION */
 
 .header__container {
+    background-color: var(--HEADER-BGCOLOR);
+    box-shadow: 0 2px 5px var(--BORDER-COLOR);
     position: fixed;
     top: 0;
-    z-index: 1;
-    box-shadow: 0 2px 5px var(--BORDER-COLOR);
-    background-color: var(--HEADER-BGCOLOR);
     width: 100%;
+    z-index: 1;
 }
 
 .header__wrapper {
+    align-content: center;
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
     padding: 10px 10px;
     width: 100%;
 }
@@ -107,20 +107,14 @@ p {
 }
 
 .search__wrapper {
-    flex-basis: 40em;
+    flex-basis: 200em;
     margin: 0 50px;
-    align-items: stretch;
 }
 
 .search__bar {
-    flex-basis: 50%;
+    flex-basis: 100%;
 
 }
-
-.searchbar__button {
-    border: none;
-}
-
 .search__button {
     background-color: var(--SEARCH__BUTTON-BGCOLOR);
     box-sizing: border-box;
@@ -133,8 +127,8 @@ p {
 }
 
 .mag-glass {
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
 }
 
 /* || CONTENT */
