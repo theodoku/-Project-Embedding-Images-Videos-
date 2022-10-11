@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 /* || RESET */
-* {
+*,
+*:before 
+*:after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,14 +38,15 @@ button {
     --FS: clamp(1rem, 2.2vw, 1.5rem);
 
     /* COLOR */
-    --BGCOLOR: rgb(247, 240, 240);
+    --BGCOLOR: #cbe2cl;
     --BORDER-COLOR: #333;
-    --HEADER-BGCOLOR: aliceblue;
+    --HEADER-BGCOLOR: #088;
     --SEARCH__BUTTON-BGCOLOR: papayawhip;
     --SEARCH__BUTTON-HOVER-BGCOLOR: #000;
     --VIDEO-BUTTON-COLOR: #888;
     --VIDEO-SUBSCRIBE-BGCOLOR: red;
     --VIDEO-SUBSCRIBE-COLOR: #444;
+    --ACHOR-TAG-COLOR:#000;
 
 
 }
@@ -59,8 +62,7 @@ html {
 
 /* TOPOGRAPHY*/
 img {
-    display: grid;
-    flex-direction: column;
+    display: block;
 }
 
 h1,
@@ -134,15 +136,15 @@ p {
 /* || CONTENT */
 
 .content__wrapper-grid {
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 70%;
+    display:block;
+    width: 50%;
     float: left;
+    margin:0 1.5%;
+
 }
 
 .video__wrapper {
-
-    flex-direction: column
+    margin-left:1px;
 }
 
 #video,
@@ -237,6 +239,8 @@ p {
 #sidebar {
     width: 30%;
     float: right;
+    margin: 0 1.5%;
+    margin-right: 2px;
 }
 
 
@@ -249,8 +253,9 @@ p {
 .sidebar-video-text ul li {
     list-style-type: none;
     font-size: small;
-    padding: 10px;
+    padding: 4px;
 }
+
 
 .thumbs-columns {
     display: flex;
@@ -262,6 +267,11 @@ p {
 
 .thumb-image {
     margin: 85px 0 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ACHOR-TAG-COLOR);
 }
 
 /* ||MEDIA QUERIES */
